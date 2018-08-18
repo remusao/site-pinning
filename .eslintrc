@@ -1,0 +1,20 @@
+{
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "es6": true,
+        "webextensions": true
+    },
+    "globals": {
+        "Promise": {},
+        "setTimeout": {},
+        "setInterval": {},
+        "clearTimeout": {}
+    },
+    "plugins": [
+    ],
+    "rules": {
+        "no-console": "off"
+    }
+}
