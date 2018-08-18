@@ -4,6 +4,8 @@
 // TODO: display a popup to require user actions when some resources are loaded
 // TODO: create HTML page to display information about sub-resources + pinning
 // TODO: pin site when clicking on the browser action icon
+// TODO - set state in browser.storage.local instead of in-memory (how do we
+// handle async properly?)
 
 const states = new Map();
 

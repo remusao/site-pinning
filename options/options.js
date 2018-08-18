@@ -1,7 +1,11 @@
 /* eslint-disable no-param-reassign */
 
+const DEFAULT_RESOURCES = [
+  'script',
+];
+
 // Restore settings when option page is opened
-browser.storage.local.get().then(({ resources = [] } = {}) => {
+browser.storage.local.get().then(({ resources = DEFAULT_RESOURCES } = {}) => {
   [...document.querySelectorAll('.resource-types [type=checkbox]')].forEach((item) => {
     if (resources.indexOf(item.getAttribute('data-type')) !== -1) {
       item.checked = true;

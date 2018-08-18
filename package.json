@@ -5,7 +5,6 @@
   "main": "background.js",
   "dependencies": {},
   "devDependencies": {
-    "babel-eslint": "^8.2.6",
     "eslint": "^5.4.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-airbnb-base": "^11.3.0",

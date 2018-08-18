@@ -9,13 +9,15 @@
     "16": "assets/icon16.png"
   },
   "browser_action": {
+    "browser_style": true,
     "default_icon": {
       "128": "assets/icon128.png",
       "48": "assets/icon48.png",
       "16": "assets/icon16.png"
     },
     "default_icon": "assets/icon128.png",
-    "default_title": "Lock site"
+    "default_title": "Lock site",
+    "default_popup": "popup/popup.html"
   },
   "options_ui": {
     "page": "options/options.html"
@@ -23,7 +25,9 @@
   "permissions": [
     "webRequest",
     "webRequestBlocking",
+    "activeTab",
     "storage",
+    "unlimitedStorage",
     "http://*/*",
     "https://*/*"
   ],
@@ -31,9 +35,6 @@
     "scripts": [
       "background.js"
     ]
-  },
-  "browser_action": {
-    "default_title": "Lock Sites"
   },
   "content_scripts": []
 }
