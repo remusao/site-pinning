@@ -1,0 +1,24 @@
+{
+  "name": "site-lock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "background.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^11.3.0",
+    "eslint-plugin-class-property": "^1.1.0",
+    "eslint-plugin-compat": "^2.2.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "tern": "^0.21.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MPL-2.0"
+}
