@@ -2,24 +2,24 @@
   "name": "site-lock",
   "version": "1.0.0",
   "description": "",
-  "main": "background.js",
+  "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^5.4.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-airbnb-base": "^11.3.0",
     "eslint-plugin-class-property": "^1.1.0",
     "eslint-plugin-compat": "^2.2.0",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
-    "tern": "^0.21.0",
-    "web-ext": "^2.8.0"
+    "web-ext": "^2.9.2"
   },
   "scripts": {
-    "lint": "web-ext lint --ignore-files firefox",
-    "run": "web-ext run --browser-console --firefox ./firefox/firefox"
+    "lint": "web-ext lint --source-dir .",
+    "start": "web-ext run --source-dir . --browser-console --firefox=./firefox/firefox"
   },
-  "author": "",
+  "author": "remi@cliqz.com",
   "license": "MPL-2.0"
 }
