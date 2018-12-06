@@ -35,8 +35,18 @@
   ],
   "background": {
     "scripts": [
-      "./background.js"
+      "./background.iife.js"
     ]
   },
-  "content_scripts": []
+  "content_scripts": [
+    {
+      "js": [
+        "content.iife.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ]
 }

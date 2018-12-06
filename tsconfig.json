@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "types": ["chrome"],
+    "target": "ES6",
+    "lib": ["es2015", "ES6", "DOM"],
+    "module": "ES6",
+    "outDir": "build",
+    "newLine": "lf",
+    "allowSyntheticDefaultImports": true,
+    "removeComments": false,
+    "moduleResolution": "Node",
+    "downlevelIteration": true,
+    "importHelpers": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true
+  },
+  "include": [
+    "./*.ts"
+  ]
+}

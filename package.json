@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "localforage": "^1.7.3"
+  },
   "devDependencies": {
+    "@types/chrome": "0.0.75",
     "babel-eslint": "^10.0.1",
+    "concurrently": "^4.1.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-airbnb-base": "^11.3.0",
@@ -14,11 +18,25 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
+    "rollup": "^0.67.4",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "tslint": "^5.11.0",
+    "typescript": "^3.2.2",
     "web-ext": "^2.9.2"
   },
   "scripts": {
-    "lint": "web-ext lint --source-dir .",
-    "start": "web-ext run --source-dir . --browser-console --firefox=./firefox/firefox"
+    "clean": "rm -fv *.iife.js build/",
+    "lint": "tslint -c tslint.json '*.ts'",
+    "lint-web-ext": "web-ext lint --source-dir . --ignore-files ./firefox/*",
+    "prebuild": "npm run lint",
+    "build": "tsc -p tsconfig.json",
+    "build-watch": "tsc -p tsconfig.json --watch",
+    "prebundle": "npm run build",
+    "bundle": "rollup -c rollup.config.js",
+    "bundle-watch": "rollup -c rollup.config.js --watch",
+    "start": "web-ext run --source-dir . --browser-console --firefox=./firefox/firefox",
+    "dev": "concurrently 'npm run build-watch' 'npm run bundle-watch' 'npm run start'"
   },
   "author": "remi@cliqz.com",
   "license": "MPL-2.0"

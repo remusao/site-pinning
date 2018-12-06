@@ -1,3 +1,5 @@
 .tern-port
 firefox/
 node_modules/
+*.iife.js
+build/
