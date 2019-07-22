@@ -13,7 +13,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
-    "tern": "^0.21.0",
+    "tern": "^0.24.1",
     "web-ext": "^2.8.0"
   },
   "scripts": {
